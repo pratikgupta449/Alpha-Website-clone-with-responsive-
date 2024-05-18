@@ -1,0 +1,557 @@
+
+/* Width,top,left ---> in percentage(%)
+  font-size,margin,padding---> in rem (1rem=16px) (when ever we have to give huge/more vlue)
+  border-radius,border,blur-----> in pixel(px) (when erver we have to give small value)
+*/
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Source Sans 3", sans-serif;
+    background-image: url(./img/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #f5f5f5;
+}
+nav{
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    padding: 0.2rem 1rem;
+   
+}
+#left{
+    /* background-color:chartreuse; */
+}
+#right{
+    /* background-color: blueviolet; */
+}
+#left>h1{
+    color: white;
+    font-size: 1rem;
+         /* by default element selector has margin */
+    margin: 0;    
+}
+#left>h1>span{
+    font-weight: 100;
+}
+#right>#cont{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    font-size: 17px;
+    margin: 0;
+    padding: 0;
+}
+#cont>li>a{
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 0.4rem 1rem;
+}
+#cont>li>a>button{
+    font-size: 1rem;
+    height: 2.3rem;
+    padding: 0.2rem 1rem;
+    border: 2px solid rgb(228, 228, 228);
+    border-radius:5px ;
+    color: white;
+    background-color: transparent;
+
+}
+
+/* -----------dropdown------------- */
+#menu{
+    list-style-type: none;
+    padding: 0;
+    position: absolute;
+    background-color: white;
+    top: 100%;
+    right: 0;
+    width: 180%;
+    height: 460%;
+    display: none;
+    border-radius: 5px;
+   
+}
+#drop{
+    position: relative;
+}
+#menu>li>a{
+    color: grey;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid rgb(238, 238, 238);
+    padding: 0.5rem;
+    /* border-radius: 5px; */
+    
+}
+#menu>li>a:hover{
+    background-color: #e89980;
+    color: white;
+    
+}
+#drop:hover #menu{
+    display: block;
+    border-radius: 5px;
+}
+#menu>:nth-child(4){
+    position: relative;
+    
+}
+/* --------------nested drop(submenu)--------------- */
+#submenu-drop{
+    position: absolute;
+    top: 0;
+    right:100%;
+    width: 100%;
+    height: 410%;
+    border-radius: 5px;
+    background-color: white;
+    list-style-type: none;
+    padding: 0;
+    display: none;
+}
+
+#submenu-drop>li a{
+    color: grey;
+    display: block;
+   padding: 0.5rem;
+    text-decoration: none;
+    border-bottom: 1px solid rgb(238, 238, 238);
+}
+#submenu-drop>li a:hover{
+    background-color: #e89980;
+    color: white;
+}
+#menu>:nth-child(4):hover #submenu-drop{
+    display: block;
+}
+
+/* ------------Alpha(section)---------- */
+#alpha{
+    text-align: center;
+    margin-top: 8rem;
+}
+#alpha>h2{
+    color: white;
+    font-size: 4rem;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+#alpha>p{
+    color: white;
+    font-weight: 200;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+#alpha>button{
+    width: 13%;
+    height: 3rem;
+    border-radius: 5px;
+    border: none;
+    color: grey;
+    margin-right: 1rem;
+    
+}
+#alpha>#learn{
+    background-color: transparent;
+    border: 2px solid rgb(199, 199, 199);
+    color: white;
+}
+/* -----------mobile------------------- */
+#mobile{
+    background-color: white;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    border-radius: 5px;
+    padding-top: 2rem;
+    margin-top: 8rem;
+}
+#mobile>h2{
+    color:#646464;
+    font-size: 2.25rem;
+    font-weight:300;
+}
+#mobile>p{
+    font-weight: 300;
+    font-size: 1.25rem;
+    color:#646464;
+    border-top: 1px solid rgb(207, 207, 207);
+    width: 70%;
+    margin: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+}
+#mobile>img{
+    width: 100%;
+}
+
+/* ----------------icon---------------- */
+#icon{
+    background-color: white;
+    width: 70%;
+    /* margin: auto; */
+    margin: 2rem auto auto auto;
+    border-radius: 5px;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+#icon>div{
+    /* background-color: blue; */
+    width: 45%;
+    display: inline-block;
+    text-align: center;
+    padding: 1rem;
+
+}
+.fa-bolt-lightning{
+    background-color: #e89980;
+    color: white;
+    border-radius: 100%;
+    padding: 1rem 1.5rem;
+    font-size: 4rem;
+}
+.fa-chart-area{
+    background-color: #7fcdb8;
+    color: white;
+    border-radius: 100%;
+    padding:  1.5rem 1.5rem;
+    font-size: 3rem;
+}
+.fa-cloud{
+    background-color: #90b0ba;
+    color: white;
+    border-radius: 100%;
+    padding:  1.4rem 1rem;
+    font-size: 3rem;
+}
+.fa-lock{
+    background-color: #e5cb95;
+    color: white;
+    border-radius: 100%;
+    padding:  1.5rem 1.6rem;
+    font-size: 3rem;
+}
+#icon>div>h2{
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+#icon>div>p{
+font-weight: 300;
+}
+#div1{
+    border-right: 2px solid #e5e5e5;
+    border-bottom: 2px solid #e5e5e5;
+   position: relative;
+   top: 2px;
+   left: 3.5px;
+}
+
+#div4{
+    border-left: 2px solid #e5e5e5;
+    border-top: 2px solid #e5e5e5;
+}
+#icon>div{
+    padding-top: 2rem;
+    /* background-color: red; */
+
+}
+
+/* -----------cards----------------- */
+#cards{
+    /* background-color: red; */
+    width: 70%;
+    margin:2rem auto auto auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0 2px 0 0 #e5e5e5
+}
+#cards>div{
+    width: 48%;
+    text-align: center;
+    padding-bottom: 2rem;
+    border-radius: 5px;
+}
+#cards>div>img{
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+#cards>div>button{
+    width: 9.5rem;
+    height:3rem ;
+    font-size: 16px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    font-weight: 300;
+    opacity: 0.5;
+}
+
+
+
+
+/* -------------signup---------------- */
+#signup{
+    background-color: #e89980;
+    text-align: center;
+    height: 50vh;
+}
+#signup>h2{
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 200;
+    padding-top: 4rem;
+    margin-bottom: 2rem;
+   
+}
+#signup>p{
+    color: white;
+    font-weight: 300;
+    font-size: 18px;
+    margin-bottom:2rem;
+}
+#signup>input{
+    width: 20%;
+    height: 2.7rem;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.158);
+    color: white;
+    box-sizing: border-box;
+   margin-right: 12px; 
+   border: none;
+   outline: none;
+   font-size: 1rem;
+   padding-left: 12px;
+   font-weight: 300;
+}
+#signup>input::placeholder {
+    color: white ;
+}
+#signup>button{ 
+   background-color: white;
+   opacity: 1; 
+    width: 8%;
+    height: 2.7rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    
+}
+#signup>button>a{
+    text-decoration: none;
+    color: #e89980;
+    font-size: 1rem;
+    
+}
+
+/* -------------------footer-------------------- */
+footer{
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+    opacity: 0.6;
+}
+footer>#top{
+    display: flex;
+    justify-content: space-between;
+    /* background-color: red; */
+ width: 20%;
+ /* height: 3rem; */
+ margin: auto;
+
+}
+footer>#top>a>i{
+    font-size: 1.8rem;
+    opacity: 0.5;
+    
+}
+footer>#down{
+    display: flex;
+    width: 40%;
+    margin: auto;
+    justify-content: space-between;
+
+}
+footer>#down>p{
+    font-size: 16px;
+    opacity: 0.5;
+}
+
+footer>#down>p:nth-child(n+2){
+    border-left: 2px solid grey;
+    padding-left: 12px;
+}
+#box{
+    display: none;
+}
+
+
+/* ----------------@media---------------- */
+
+/* ---------------mobile------------------- */
+@media(max-width:600px){
+    body{
+        /* if data is same then it is not mandatory keep-it or remove */
+
+        /* margin: 0;
+        padding: 0;
+        font-family: "Source Sans 3", sans-serif; 
+        background-image: url(./img/banner.jpg);
+         background-repeat: no-repeat;  */
+         /* background-color: #f5f5f5; */
+        background-size: 190%;
+        background-position-x: center;
+    }
+    #box{
+        display: inline-block;
+        color: white;
+        background-color: grey;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        margin-top: 0.5rem;
+        margin-left: 0.5rem;  
+    }
+    nav{
+        display: none;
+    }
+
+    #alpha{
+        width: 80%;
+        margin: auto;
+        margin-top: 0rem;
+    }
+    #alpha>h2{
+       
+        font-size: 2rem;
+    }
+    #alpha>p{
+        font-size: 1.1rem;
+        
+    }
+    #alpha>button{
+        width: 100%;
+        margin-bottom: 1rem;
+        
+    }
+    #mobile{
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        border-radius: 0px;
+        padding-top: 1rem;
+        margin-top: 2rem;
+    }
+    #mobile>h2{
+        font-size: 1.5rem;
+    }
+    #mobile>p{
+        font-size: 1.2rem;
+        width: 90%;
+    }
+    br{
+        display: none;
+    }
+
+    #icon{
+        width: 100%;
+        margin: auto;
+        padding: 1rem;
+    }
+    #icon>div{
+        width: 90%;
+        margin: auto;
+        border-bottom: 2px solid grey;
+    }
+    #div1{
+        border-right: none;
+        border-bottom: none;
+       position: relative;
+       top: 0px;
+       left: 0px;
+    }
+    
+    #div4{
+        border-left: none;
+        border-top: none;
+    }
+    #cards{
+        display: block;
+        width: 100%;
+    }
+    #cards>div{
+        width: 100%;
+        margin-top: 1rem;
+    }
+    #signup{
+        padding: 0.8rem;
+        padding-top: 16px;
+        height: 20rem;
+    }
+    #signup>h2{
+       
+        font-size: 1.5rem;
+        font-weight: 100;
+        padding-top: 1rem;
+        margin-bottom: 0rem;
+       
+    }
+    #signup>p{
+        font-size: 16px;
+        margin-bottom:1rem;
+    }
+    #signup>input{
+        width: 90%;
+        margin-right: 0px; 
+       margin-bottom: 1rem;
+    }
+   
+    #signup>button{ 
+        width: 90%;
+    }
+    #signup>button>a{
+        font-size: 1rem;
+        
+    }
+    
+    footer{
+        width: 100%;
+        height: 40rem;
+        padding-top: 1rem;
+        padding-bottom: 1.4rem;
+    }
+    
+    footer>#top{
+     width: 90%;
+    
+    }
+    
+    footer>#down{
+        width: 90%;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
